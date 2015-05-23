@@ -12,7 +12,7 @@ exports.register = function (server, options, next) {
               .redirect(`https://${request.headers.host}${request.url.path}`);
       }
 
-      reply();
+      reply.continue();
     });
   }
 

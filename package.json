@@ -1,7 +1,7 @@
 {
-  "name": "uku",
-  "version": "0.0.1",
-  "description": "node.js template for Heroku API services",
+  "name": "static-sso",
+  "version": "1.0.0",
+  "description": "static file server protected by Google auth matching specified domain",
   "main": "index.js",
   "scripts": {
     "test": "node --use_strict --harmony_arrow_functions ./node_modules/.bin/lab --timeout 5000 --lint",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/lanai.git"
+    "url": "https://github.com/jmonster/static-sso.git"
   },
   "keywords": [
     "node.js",
@@ -20,25 +20,19 @@
   "author": "johnny domino <jvdomino@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heroku/lanai/issues"
+    "url": "https://github.com/jmonster/static-sso/issues"
   },
-  "homepage": "https://github.com/heroku/lanai",
+  "homepage": "https://github.com/jmonster/static-sso",
   "engines": {
     "iojs": "2.0.x",
     "npm": "2.9.0"
   },
   "dependencies": {
-    "bluebird": "^2.9.25",
-    "bookshelf": "^0.8.1",
+    "bell": "^2.8.0",
     "boom": "^2.7.1",
     "confidence": "^1.1.0",
     "hapi": "^8.4.0",
-    "joi": "^6.4.1",
-    "knex": "^0.8.5",
-    "lodash": "^3.9.1",
-    "mrhorse": "0.0.3",
-    "pg": "^4.3.0",
-    "request": "request/request#master"
+    "hapi-auth-cookie": "^2.2.0"
   },
   "devDependencies": {
     "code": "^1.4.0",
