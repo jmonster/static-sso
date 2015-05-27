@@ -32,7 +32,8 @@
     "boom": "^2.7.1",
     "confidence": "^1.1.0",
     "hapi": "^8.4.0",
-    "hapi-auth-cookie": "^2.2.0"
+    "hapi-auth-cookie": "^2.2.0",
+    "lodash": "^3.9.3"
   },
   "devDependencies": {
     "code": "^1.4.0",
