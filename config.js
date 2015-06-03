@@ -65,7 +65,7 @@ const config = {
       'upstream': {
         proto: process.env.UPSTREAM_PROTO,
         domain: process.env.UPSTREAM_DOMAIN,
-        auth:{
+        auth: {
           'username': process.env.UPSTREAM_USERNAME,
           'password': process.env.UPSTREAM_PASSWORD
         }
@@ -77,7 +77,7 @@ const config = {
       'upstream': {
         proto: 'https',
         domain: 'purple.herokuapp.com',
-        auth:{
+        auth: {
           'username': 'basic',
           'password': 'auth'
         }
