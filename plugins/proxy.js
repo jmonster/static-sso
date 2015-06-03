@@ -1,22 +1,23 @@
 const info = require('../package.json');
 const conf = require('../config');
-const _ = require('lodash');
 
 exports.register = function (server, options, next) {
 
   const mapper = function (request, callback) {
 
-    const username = conf.get('/app/upstreamAuth/username');
-    const password = conf.get('/app/upstreamAuth/password');
+    const proto = conf.get('/app/upstream/proto');
+    const domain = conf.get('/app/upstream/domain');
+    const username = conf.get('/app/upstream/auth/username');
+    const password = conf.get('/app/upstream/auth/password');
     const basic = 'Basic ' + (new Buffer(username + ':' + password, 'utf8')).toString('base64');
 
-    callback(null, `http://purple.herokuapp.com${request.url.path}`, { authorization: basic });
+    callback(null, `${proto}://${domain}${request.url.path}`, { authorization: basic });
   };
 
 
   server.route({
     method: '*',                            // all methods
-    path: '/{path*}',                       // all routes prefixed with `/api/`
+    path: '/{path*}',                       // all routes prefixed with `/`
     config: { auth: 'session' },
     handler: {
       proxy: {
