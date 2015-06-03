@@ -62,16 +62,23 @@ const config = {
     $filter: 'env',
     production: {
       'restrictedDomain': process.env.RESTRICTED_DOMAIN,
-      'upstreamAuth': {
-        'username': process.env.UPSTREAM_USERNAME,
-        'password': process.env.UPSTREAM_PASSWORD
+      'upstream': {
+        auth:{
+          'username': process.env.UPSTREAM_USERNAME,
+          'password': process.env.UPSTREAM_PASSWORD
+        }
+
       }
     },
     $default: {
       'restrictedDomain': 'gmail.com',
-      'upstreamAuth': {
-        'username': 'basic',
-        'password': 'auth'
+      'upstream': {
+        proto: 'https',
+        domain: 'purple.herokuapp.com',
+        auth:{
+          'username': 'basic',
+          'password': 'auth'
+        }
       }
     }
   }
