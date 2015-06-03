@@ -63,6 +63,8 @@ const config = {
     production: {
       'restrictedDomain': process.env.RESTRICTED_DOMAIN,
       'upstream': {
+        proto: process.env.UPSTREAM_PROTO,
+        domain: process.env.UPSTREAM_DOMAIN,
         auth:{
           'username': process.env.UPSTREAM_USERNAME,
           'password': process.env.UPSTREAM_PASSWORD
