@@ -61,10 +61,18 @@ const config = {
   'app': {
     $filter: 'env',
     production: {
-      'restrictedDomain': process.env.RESTRICTED_DOMAIN
+      'restrictedDomain': process.env.RESTRICTED_DOMAIN,
+      'upstreamAuth': {
+        'username': process.env.UPSTREAM_USERNAME,
+        'password': process.env.UPSTREAM_PASSWORD
+      }
     },
     $default: {
-      'restrictedDomain': 'gmail.com'
+      'restrictedDomain': 'gmail.com',
+      'upstreamAuth': {
+        'username': 'basic',
+        'password': 'auth'
+      }
     }
   }
 };

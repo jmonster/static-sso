@@ -4,11 +4,12 @@ const _ = require('lodash');
 
 exports.register = function (server, options, next) {
 
-  var mapper = function (request, callback) {
+  const mapper = function (request, callback) {
 
-    var username = 'herokai';
-    var password = 'ohherrotherenicetoseeyou';
-    var basic = 'Basic ' + (new Buffer(username + ':' + password, 'utf8')).toString('base64');
+    const username = conf.get('/app/upstreamAuth/username');
+    const password = conf.get('/app/upstreamAuth/password');
+    const basic = 'Basic ' + (new Buffer(username + ':' + password, 'utf8')).toString('base64');
+
     callback(null, `http://purple.herokuapp.com${request.url.path}`, { authorization: basic });
   };
 
