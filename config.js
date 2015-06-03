@@ -14,7 +14,7 @@ const config = {
         '$default': 1000
       }
     },
-    'enforceSSL': {
+    'enforceEncryption': {
       '$filter': 'env',
       'production': true,
       '$default': false
