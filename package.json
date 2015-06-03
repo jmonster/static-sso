@@ -24,14 +24,14 @@
   },
   "homepage": "https://github.com/jmonster/static-sso",
   "engines": {
-    "iojs": "2.0.x",
+    "iojs": "2.2.x",
     "npm": "2.9.0"
   },
   "dependencies": {
-    "bell": "^2.8.0",
-    "boom": "^2.7.1",
+    "bell": "^3.0.0",
+    "boom": "^2.7.2",
     "confidence": "^1.1.0",
-    "hapi": "^8.4.0",
+    "hapi": "^8.6.0",
     "hapi-auth-cookie": "^2.2.0",
     "hapi-require-https": "^2.0.0"
   },
